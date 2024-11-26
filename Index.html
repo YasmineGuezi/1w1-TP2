@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP2 - Guezi Yasmine</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!------------Entete-------------->
+    <header id="Accueil" class="entete">
+        <div class="global hero">
+
+            <!--Navigation-->
+            <label id="burger" for="chk-burger">  
+                <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu-alt-1&color=888" width="32" height="32">
+                </label> <input type="checkbox" name="chk-burger" id="chk-burger">  
+            <nav id="menu">
+            <a href="#Accueil">Accueil</a>
+            <a href="#inscription">Inscription</a>
+            <a href="#tableau">Tableau</a>
+            <a href="#articles">Articles</a>
+            <a href="#galerie">Galerie</a>
+            <a href="#vidéo">Vidéo</a>
+            <a href="#pied">Info</a>
+            </nav>
+            <!--Fin de Navigation-->
+
+            <!--Début de Écriture + Texte-->
+            <section class="écriture">
+             <div class="texte">
+              <h1>The Legend of Zelda </h1>
+               <div class="paragraphe">
+                <p>Auteure: Yasmine Guezi</p>
+                <p>Techniques d'intégration multimédia - 582-1W1 - Mise en page Web  </p>
+                <p>Collège de Maisonneuve - 3800 Sherbrooke Est, Montréal</p>
+                <p id="GitHub"><a href="https://github.com/YasmineGuezi">Lien GitHub Pages</a></p>
+               </div>
+             </div>
+             <!--Début d'Images-->
+             <img id="logo" src="image/LozBotw.png" alt="Logo">
+            </section>
+
+        </div>
+    </header>
+
+    <!------------Inscription-------------->
+    <section id="inscription">
+        <div class="global">
+            <h2>Bienvenue dans le monde d'Hyrule</h2> 
+            <p>Inscrivez-vous et explorez le royaume de Zelda </p>
+            <!--Début de Général-->
+                <form class="formulaire">
+                    <fieldset> <Legend>Obligatoire</Legend>
+                    <div>
+                     <label for="nom">Nom</label>
+                     <input id="nom" type="text" placeholder="Entrez votre nom">
+                    </div>
+                    <div>
+                        <label for="prenom">Prenom</label>
+                        <input id="prenom" type="text" placeholder="Entrez votre prenom">
+                    </div>
+                    <div>
+                        <label for="courriel">Courriel</label>
+                        <input id="courriel" type="text" placeholder="Entrez votre courriel">
+                    </div>
+                    </fieldset>
+                </form>
+            <!--Fin de Général-->    
+
+            <!--Début de Sexe-->
+         <fieldset>
+            <legend>Sexe :</legend>
+            <label>
+                <input type="radio" name="sexe" value="homme" required> Homme
+            </label>
+            <label>
+                <input type="radio" name="sexe" value="femme"> Femme
+            </label>
+         </fieldset>
+             <!--Fin de Sexe-->
+
+             <!--Début de Préférences-->
+         <fieldset>
+            <legend>Préférences :</legend>
+            <label>
+                <input type="checkbox" name="preferences[]" value="newsletter"> Être informé par courriel
+            </label>
+            <label>
+                <input type="checkbox" name="preferences[]" value="promotions"> Être informé par téléphone
+            </label>
+            <label>
+                <input type="checkbox" name="preferences[]" value="event"> Ne pas être informé
+            </label>
+        </fieldset>
+        <!--Fin de Préférences-->
+
+        <!--Début de Région-->
+        <label for="région">Région :</label>
+        <select id="région" name="région" required>
+            <option value="">-- Sélectionnez votre région préférée --</option>
+            <option value="hyliens">Hyliens</option>
+            <option value="zoras">Zoras</option>
+            <option value="gorons">Gorons</option>
+            <option value="ritos">Ritos</option>
+            <option value="gerudos">Gerudos</option>
+        </select>
+
+        <div id="reinitialiser">
+            <button type="button" onclick="location.reload()">Actualiser</button>
+        </div>
+        </div>
+    </section>
+
+    <!------------Tableau-------------->
+    <section id="tableau">
+        <div class="global">
+            <h2>Tableau</h2>
+            <table>
+                <caption>
+                    Budget de Vacances
+                </caption>
+                <thead>
+                <tr>
+                    <td></td>
+                    <th>Jour 1</th>
+                    <th>Jour 2</th>
+                    <th>Jour 3</th>
+                    <th>Jour 4</th>
+                    <th>Jour 5</th>
+                </tr>
+            </thead>
+        
+            <tbody>
+                <tr>
+                    <th>Transport</th>
+                    <td>250$</td>
+                    <td>100$</td>
+                    <td>50$</td>
+                    <td>0$</td>
+                    <td>300$</td>
+                </tr>
+        
+                <tr>
+                    <th>Nourriture</th>
+                    <td>100$</td>
+                    <td>120$</td>
+                    <td>130$</td>
+                    <td>150$</td>
+                    <td>100$</td>
+                </tr>
+        
+                <tr>
+                    <th>Logement</th>
+                    <td>150$</td>
+                    <td>220$</td>
+                    <td>90$</td>
+                    <td>50$</td>
+                    <td>150$</td>
+                </tr>
+            </tbody>
+        
+            <tfoot>
+        
+                <tr>
+                    <th>Total</th>
+                    <td>500$</td>
+                    <td>440$</td>
+                    <td>270$</td>
+                    <td>200$</td>
+                    <td>550$</td>
+                </tr>
+            </tfoot>
+            </table>
+        </div>
+    </section>
+
+    <!------------Articles-------------->
+    <section id="articles">
+        <div class="global">
+            <h2>Articles</h2>
+        </div>
+    </section>
+
+    <!------------Galerie-------------->
+    <section id="galerie">
+        <div class="global">
+            <h2>Galerie</h2>
+        </div>
+    </section>
+
+    <!------------Vidéo-------------->
+    <section id="vidéo">
+        <div class="global">
+            <h2>Vidéo</h2>
+        </div>
+    </section>
+
+    <!------------Footer-------------->
+    <footer id="pied" class="pied">
+        <div class="global">
+            <h2>Info</h2>
+        </div>
+    </footer>
+</body>
+</html>

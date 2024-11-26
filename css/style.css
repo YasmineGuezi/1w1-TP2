@@ -1,0 +1,113 @@
+/*Base General*/*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     color: #fff;}
+.entete,
+.pied{background-color: #1b1b2f;}
+.global{min-height: 100vh;
+        max-width: 900px;
+        background-color: rgba(0, 0, 0, .5);
+        margin: 0 auto;
+    }
+body > section:nth-of-type(1){background-color: hsl(252, 43%, 18%);}
+body > section:nth-of-type(2){background-color: hsl(251, 49%, 24%);}
+body > section:nth-of-type(3){background-color: hsl(251, 52%, 32%);}
+body > section:nth-of-type(4){background-color: hsl(251, 49%, 24%);}
+body > section:nth-of-type(5){background-color: hsl(252, 43%, 18%);}
+html{scroll-behavior: smooth;}
+/*Fin de Base General*/
+
+/*Début de Accueil*/
+/*Entete*/
+h2{padding: 10px;}
+
+/*Navigation*/
+#burger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border: 1px solid rgb(233, 255, 122);
+    border-radius: 5px;
+    z-index: 9;
+    background-color: rgb(76, 111, 66);
+}
+
+#menu {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     align-items: flex-start;
+     gap: 10px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border: 3px solid rgb(22, 179, 8);
+    background-color: rgb(25, 116, 38);
+    color: #fff;
+    transition: transform .25s;
+    transform: translateX(250px);
+    width: 200px;
+    height: 400px;
+    padding: 10px;
+    padding-left: 40px;
+    z-index: 0;
+}
+ 
+#menu a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+ 
+#chk-burger {
+    display: none;
+    width: 200px;
+    border: 2px solid rgb(255, 83, 229);
+    padding: 10px;
+}
+#chk-burger:checked + #menu {transform: translateX(0);}
+/*Fin de Navigation*/
+
+/*Écriture*/
+.texte {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    padding: 25px;
+}
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* ou une police similaire */
+    font-size: 48px;
+    font-style: italic;
+    flex-wrap: wrap;
+    color: #f9d342;
+}
+
+.paragraphe{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 27px;
+    font-size: 13px;
+}
+
+p a{color: #4eafc0;}
+p a:hover{color: #3e92a1;}
+/*Fin de Écriture*/
+
+/*Début d'Image/Logo*/
+
+#logo {
+    width: 380px;
+    height: auto;
+    padding: 15px;
+}
+/*Fin d'Image/Logo*/
+/*Fin de Accueil*/
+
+/*Début de Inscription*/
+
