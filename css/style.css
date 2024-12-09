@@ -21,9 +21,12 @@ html{scroll-behavior: smooth;}
 /*Fin de Base General*/
 
 /*Début de Accueil*/
+#logo{
+    width: 350px;
+    height: auto;
+    padding-left: 10px;
+}
 /*Entete*/
-h2{padding: 10px;}
-
 /*Navigation*/
 #burger {
     position: fixed;
@@ -53,7 +56,7 @@ h2{padding: 10px;}
     height: 400px;
     padding: 10px;
     padding-left: 40px;
-    z-index: 0;
+    z-index: 1;
 }
  
 #menu a {
@@ -99,15 +102,131 @@ p a{color: #4eafc0;}
 p a:hover{color: #3e92a1;}
 /*Fin de Écriture*/
 
-/*Début d'Image/Logo*/
-
-#logo {
-    width: 380px;
-    height: auto;
-    padding: 15px;
-}
-/*Fin d'Image/Logo*/
 /*Fin de Accueil*/
-
+h2{padding: 10px;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-size: 30px;
+   font-style: italic;
+   color: #f9d342;
+}
 /*Début de Inscription*/
 
+/*Formulaire (L'encadrement pour tout les formulaires*/
+.formulaire{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 50px;
+    width: 300px;
+}
+/*Fin de Formulaire*/
+/*Début de Obligatoire*/
+.Personnel{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+/*Fin de Obligatoire*/
+/*Début de Sexe*/
+.Sexe/*Le truc autour d'homme et femme*/{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+.sexe/*Homme et femme*/{
+    display: flex;
+    justify-content: space-between;
+}
+/*Fin de Sexe*/
+/*Début de Preferences*/
+.Preferences{width: 625px;}
+.preferences{
+    display: flex;
+    gap: 12px;
+}
+/*Fin de Preferences*/
+/*Début de Région*/
+#région{margin-bottom: 10px;}
+/*Fin de Région*/
+/*Fin de Inscription*/
+
+/*Début de Tableau*/
+table {
+    border-collapse: collapse;
+    margin: 100px auto; /* Centrer le tableau et ajouter de l'espace en haut/bas */
+    width: 90%;
+    background-color: #1b1b2f;
+    color: #ffffff;
+    flex-wrap: wrap;
+}
+table, th, td {border: 1px solid #3a3a5c;}
+th, td {
+    text-align: left;
+    padding: 10px;
+}
+th {
+    background-color: hsl(251, 49%, 24%);
+    color: #ffffff;
+}
+tr:nth-child(even) {background-color: hsl(252, 43%, 18%);}
+tr:nth-child(odd) {background-color: hsl(251, 52%, 32%);}
+tr:hover {
+    background-color: hsl(251, 49%, 40%);
+    color: #ffffff;
+}
+/*Fin de Tableau
+
+/*Début d'Articles*/
+/*Début d'Articles*/
+.article{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    padding-top: 30px;
+}
+.article__p{
+    padding-top: 20px;
+    line-height: 1.3rem;
+}
+/*Décoration des Images*/
+.article:nth-of-type(even)  .article__figure{order: 2;}
+.article__figure {
+    transform : scale(.95) translateX(-2%);
+    transition : transform .25s, filter .25s;
+    filter:grayscale(1) blur(1px);
+    padding-right: 15px;
+  }
+  .article__figure:hover {
+    transform : scale(1.5) translateX(0);
+    filter:grayscale(0) blur(0);
+  }
+  #sword{margin-left: 25px;}
+  #korogus{margin-left: 5px;}
+  #caption{font-family: Georgia, 'Times New Roman', Times, serif;}
+  /*Fin d'Articles*/
+
+  /*Début de Galerie*/
+  .Images{
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-left: 45px;
+}
+.Images img:hover {transform: scale(2.5);}
+.Images img {
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    cursor: pointer;
+}
+.img{width: 80px;}
+#preview {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #f0f0f0; /* Pour visualiser le conteneur */
+}
+#preview img {
+    display: block;
+    max-width: 500px;
+    margin: 0 auto;
+}
+/*Fin de Galerie*/

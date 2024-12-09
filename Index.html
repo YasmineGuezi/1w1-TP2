@@ -49,10 +49,11 @@
     <section id="inscription">
         <div class="global">
             <h2>Bienvenue dans le monde d'Hyrule</h2> 
-            <p>Inscrivez-vous et explorez le royaume de Zelda </p>
+            <p id="description">Inscrivez-vous et explorez le royaume de Zelda </p>
             <!--Début de Général-->
                 <form class="formulaire">
-                    <fieldset> <Legend>Obligatoire</Legend>
+                    <fieldset> <Legend>Obligatoire :</Legend>
+                <section class="Personnel">
                     <div>
                      <label for="nom">Nom</label>
                      <input id="nom" type="text" placeholder="Entrez votre nom">
@@ -65,25 +66,29 @@
                         <label for="courriel">Courriel</label>
                         <input id="courriel" type="text" placeholder="Entrez votre courriel">
                     </div>
+                </section>
                     </fieldset>
-                </form>
+                
             <!--Fin de Général-->    
 
             <!--Début de Sexe-->
-         <fieldset>
+         <fieldset class="Sexe">
             <legend>Sexe :</legend>
+            <div class="sexe">
             <label>
                 <input type="radio" name="sexe" value="homme" required> Homme
             </label>
             <label>
                 <input type="radio" name="sexe" value="femme"> Femme
             </label>
+            </div>
          </fieldset>
              <!--Fin de Sexe-->
 
              <!--Début de Préférences-->
-         <fieldset>
+         <fieldset class="Preferences">
             <legend>Préférences :</legend>
+            <div class="preferences">
             <label>
                 <input type="checkbox" name="preferences[]" value="newsletter"> Être informé par courriel
             </label>
@@ -93,11 +98,12 @@
             <label>
                 <input type="checkbox" name="preferences[]" value="event"> Ne pas être informé
             </label>
+            </div>
         </fieldset>
         <!--Fin de Préférences-->
 
         <!--Début de Région-->
-        <label for="région">Région :</label>
+        <label id="Region" for="région">Région :</label>
         <select id="région" name="région" required>
             <option value="">-- Sélectionnez votre région préférée --</option>
             <option value="hyliens">Hyliens</option>
@@ -111,89 +117,143 @@
             <button type="button" onclick="location.reload()">Actualiser</button>
         </div>
         </div>
+    </form>
     </section>
 
     <!------------Tableau-------------->
     <section id="tableau">
+        <!--Ocarina Of Time-->
         <div class="global">
-            <h2>Tableau</h2>
-            <table>
-                <caption>
-                    Budget de Vacances
-                </caption>
+            <h2>Le Meilleur Jeu</h2>
+            <p id="description">Il y a plusieurs objets magiques à trouver dans l'univers du jeu Ocarina Of Time
+                afin d'aider Link dans sa quête:</p>
+            <table class="Ooc">
                 <thead>
-                <tr>
-                    <td></td>
-                    <th>Jour 1</th>
-                    <th>Jour 2</th>
-                    <th>Jour 3</th>
-                    <th>Jour 4</th>
-                    <th>Jour 5</th>
-                </tr>
-            </thead>
-        
-            <tbody>
-                <tr>
-                    <th>Transport</th>
-                    <td>250$</td>
-                    <td>100$</td>
-                    <td>50$</td>
-                    <td>0$</td>
-                    <td>300$</td>
-                </tr>
-        
-                <tr>
-                    <th>Nourriture</th>
-                    <td>100$</td>
-                    <td>120$</td>
-                    <td>130$</td>
-                    <td>150$</td>
-                    <td>100$</td>
-                </tr>
-        
-                <tr>
-                    <th>Logement</th>
-                    <td>150$</td>
-                    <td>220$</td>
-                    <td>90$</td>
-                    <td>50$</td>
-                    <td>150$</td>
-                </tr>
-            </tbody>
-        
-            <tfoot>
-        
-                <tr>
-                    <th>Total</th>
-                    <td>500$</td>
-                    <td>440$</td>
-                    <td>270$</td>
-                    <td>200$</td>
-                    <td>550$</td>
-                </tr>
-            </tfoot>
+                    <tr>
+                        <th>Statistiques</th>
+                        <th>Description</th>
+                        <th>Valeur actuelle</th>
+                        <th>Maximum possible</th>
+                        <th>Commentaires</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cœurs</td>
+                        <td>Points de vie</td>
+                        <td>3</td>
+                        <td>20</td>
+                        <td>Collectez des fragments de cœur.</td>
+                    </tr>
+                    <tr>
+                        <td>Magie</td>
+                        <td>Barre magique</td>
+                        <td>0</td>
+                        <td>2</td>
+                        <td>Requiert l'extension magique.</td>
+                    </tr>
+                    <tr>
+                        <td>Bouteilles</td>
+                        <td>Nombre de bouteilles obtenues</td>
+                        <td>1</td>
+                        <td>4</td>
+                        <td>Très utiles pour conserver des objets.</td>
+                    </tr>
+                    <tr>
+                        <td>Pièces d'or</td>
+                        <td>Nombre de Skulltulas dorées</td>
+                        <td>15</td>
+                        <td>100</td>
+                        <td>Échangez-les pour des récompenses.</td>
+                    </tr>
+                    <tr>
+                        <td>Quarts de cœur</td>
+                        <td>Fragments de cœur collectés</td>
+                        <td>2</td>
+                        <td>36</td>
+                        <td>4 fragments complètent un cœur.</td>
+                    </tr>
+                </tbody>
             </table>
+            <!--Statistique-->
         </div>
     </section>
 
     <!------------Articles-------------->
     <section id="articles">
         <div class="global">
-            <h2>Articles</h2>
+            <h2>Secrets</h2>
+            <p id="description">Hyrule cache de nombreux secrets...</p>
+
+             <!--Korogus-->
+             <article class="article">
+                <figure class="article__figure">
+                <img id="korogus" src="image/Korogus.png" alt="Korogus" width="40px">
+                <figcaption id="caption">Korogus</figcaption>   
+                </figure>
+                <p class="article__p">Les Korogus (ou Koroks) sont de petites créatures végétales qui apparaissent dans l'univers de
+                    The Legend of Zelda, notamment dans The Wind Waker et Breath of the Wild.
+                    Ces esprits de la forêt sont les protégés de l'Arbre Mojo (ou Grand Arbre Mojo),
+                    qu'ils considèrent comme leur guide. Les Korogus incarnent l'esprit de la nature et la joie de vivre. Ils sont curieux, espiègles et jouent parfois des farces en se cachant dans l'environnement.
+                    Leur lien avec la nature en fait un symbole de l'harmonie écologique dans l'univers de Zelda.
+                </p>
+            </article>
+    
+            <article class="article">
+                <figure class="article__figure">
+                <img id="sword" src="image/Master-Sword.png" alt="Épée" width="40px">
+                <figcaption id="caption">La Lame Purificatrice</figcaption>
+                </figure>
+                <p class="article__p"> Forcée par la déesse Hylia, elle a été forgée à partir de l’Épée de la Déesse,
+                    puis améliorée par les flammes sacrées dans Skyward Sword.
+                    Elle devient la Master Sword après ces transformations.La Master Sword incarne l’espoir,
+                    le courage et la lutte éternelle contre les forces du mal. Elle est un symbole intemporel de la série,
+                    témoignant du cycle héroïque de Link et de sa quête pour protéger Hyrule.</p>
+            </article>
+    
+            <article class="article">
+                <figure class="article__figure">
+                <img src="image/Naboris.png" alt="Naboris" width="60px">
+                <figcaption id="caption">Les Créatures Divines</figcaption>    
+            </figure>
+            <p class="article__p">
+                Les Créatures Divines (ou Divine Beasts) sont des machines gigantesques et mythiques présentes dans The Legend of Zelda: Breath of the Wild.
+                Ces constructions titanesques, créées il y a des millénaires par les Sheikahs,
+                ont été conçues pour aider à combattre le mal,
+                en particulier Ganon, dans des batailles épiques.
+                Elles sont contrôlées depuis leur intérieur, qui abrite un sanctuaire complexe,
+                rempli d’énigmes et de mécanismes à activer pour les restaurer.</p>
+            </article>
         </div>
     </section>
 
     <!------------Galerie-------------->
     <section id="galerie">
         <div class="global">
-            <h2>Galerie</h2>
+            <h2>Quelques images...</h2>
+            <p id="description">Les images suivantes viennent du jeu Age of Calamity et reprèsentent
+                les personnages jouables du jeu.</p>
+            <galerie class="Images">
+                    <img class="img" src="image/Vignette-Link.png" alt="Link-AOC">
+                    <img class="img" src="image/Vignette-Zelda.png" alt="Zelda-AOC">
+                    <img class="img" src="image/Vignette-Mipha.png" alt="Mipha-AOC">
+                    <img class="img" src="image/Vignette-Daruk.png" alt="Daruk-AOC">
+                    <img class="img" src="image/Vignette-Revali.png" alt="Revali-AOC">
+                    <img class="img" src="image/Vignette-Urbosa.png" alt="Urbosa-AOC">
+                    <img class="img" src="image/Vignette-Sidon.png" alt="Sidon-AOC">
+                    <img class="img" src="image/Vignette-Yunobo.png" alt="Yunobo-AOC">
+                    <img class="img" src="image/Vignette-Teba.png" alt="Teba-AOC">
+                    <img class="img" src="image/Vignette-Riju.png" alt="Riju-AOC">
+            </galerie>
         </div>
     </section>
 
     <!------------Vidéo-------------->
     <section id="vidéo">
         <div class="global">
-            <h2>Vidéo</h2>
+            <h2>Un Moment Attendu</h2>
+            <p id="description">Voici un trailer que le monde entier attendait
+                avec impatience. </p>
         </div>
     </section>
 
